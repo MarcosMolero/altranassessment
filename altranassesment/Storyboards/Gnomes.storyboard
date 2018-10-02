@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5XY-zT-pYO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gnomes-->
+        <scene sceneID="Hkx-ti-mKy">
+            <objects>
+                <viewController id="5XY-zT-pYO" customClass="GnomesViewController" customModule="altranassesment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0uE-LY-law">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Wj-gX-eKR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gnomesCell" rowHeight="88" id="0He-BJ-lps" customClass="GnomesCell" customModule="altranassesment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0He-BJ-lps" id="GhW-LV-Q0H">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SYo-M9-coD">
+                                                    <rect key="frame" x="15" y="6.5" width="75" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="75" id="0O9-x0-TEx"/>
+                                                        <constraint firstAttribute="width" constant="75" id="UYE-Pa-fha"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GT4-rY-tUJ">
+                                                    <rect key="frame" x="98" y="33.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SYo-M9-coD" firstAttribute="leading" secondItem="GhW-LV-Q0H" secondAttribute="leading" constant="15" id="EUS-NO-aE7"/>
+                                                <constraint firstItem="SYo-M9-coD" firstAttribute="centerY" secondItem="GhW-LV-Q0H" secondAttribute="centerY" id="XuF-aM-UOd"/>
+                                                <constraint firstItem="GT4-rY-tUJ" firstAttribute="centerY" secondItem="GhW-LV-Q0H" secondAttribute="centerY" id="ZfW-EM-PAK"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="GT4-rY-tUJ" secondAttribute="trailing" constant="8" id="cJu-yS-js9"/>
+                                                <constraint firstItem="GT4-rY-tUJ" firstAttribute="leading" secondItem="SYo-M9-coD" secondAttribute="trailing" constant="8" id="glE-bC-30I"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="GT4-rY-tUJ" id="KcD-Lm-k3f"/>
+                                            <outlet property="thumbnailImageView" destination="SYo-M9-coD" id="CJR-A9-KBH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5XY-zT-pYO" id="glT-b4-Xmw"/>
+                                    <outlet property="delegate" destination="5XY-zT-pYO" id="lQl-MV-CPx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Wj-gX-eKR" firstAttribute="leading" secondItem="5eh-TC-oAc" secondAttribute="leading" id="FFg-CD-oci"/>
+                            <constraint firstItem="5Wj-gX-eKR" firstAttribute="top" secondItem="5eh-TC-oAc" secondAttribute="top" id="GCJ-6i-9we"/>
+                            <constraint firstItem="5eh-TC-oAc" firstAttribute="bottom" secondItem="5Wj-gX-eKR" secondAttribute="bottom" id="dbX-Ce-f5A"/>
+                            <constraint firstItem="5eh-TC-oAc" firstAttribute="trailing" secondItem="5Wj-gX-eKR" secondAttribute="trailing" id="ncc-QZ-umW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5eh-TC-oAc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gnomes" id="3Am-s5-rz9"/>
+                    <connections>
+                        <outlet property="gnomesTableView" destination="5Wj-gX-eKR" id="6yu-Qa-u1j"/>
+                        <segue destination="e0b-0J-kIS" kind="show" identifier="showGnome" id="qqi-am-hjb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nc5-J0-e8i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1223.2" y="124.58770614692655"/>
+        </scene>
+        <!--Gnome-->
+        <scene sceneID="Lcw-xL-eyf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Gnome" id="e0b-0J-kIS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BBQ-M4-K1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834" y="124"/>
+        </scene>
+    </scenes>
+</document>
